@@ -1,9 +1,8 @@
 package demo.service;
 
+import demo.dao.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import demo.dao.WordDao;
 
 /**
  * Build a sentence by assembling randomly generated subjects, verbs, 
@@ -13,11 +12,11 @@ import demo.dao.WordDao;
 @Service
 public class SentenceServiceImpl implements SentenceService {
 
-	private WordDao verbService;
-	private WordDao subjectService;
-	private WordDao articleService;
-	private WordDao adjectiveService;
-	private WordDao nounService;
+	private VerbClient verbService;
+	private SubjectClient subjectService;
+	private ArticleClient articleService;
+	private AdjectiveClient adjectiveService;
+	private NounClient nounService;
 	
 
 	/**
@@ -37,27 +36,27 @@ public class SentenceServiceImpl implements SentenceService {
 
 
 	@Autowired
-	public void setVerbService(WordDao verbService) {
+	public void setVerbService(VerbClient verbService) {
 		this.verbService = verbService;
 	}
 
 	@Autowired
-	public void setSubjectService(WordDao subjectService) {
+	public void setSubjectService(SubjectClient subjectService) {
 		this.subjectService = subjectService;
 	}
 
 	@Autowired
-	public void setArticleService(WordDao articleService) {
+	public void setArticleService(ArticleClient articleService) {
 		this.articleService = articleService;
 	}
 
 	@Autowired
-	public void setAdjectiveService(WordDao adjectiveService) {
+	public void setAdjectiveService(AdjectiveClient adjectiveService) {
 		this.adjectiveService = adjectiveService;
 	}
 
 	@Autowired
-	public void setNounService(WordDao nounService) {
+	public void setNounService(NounClient nounService) {
 		this.nounService = nounService;
 	}	
 	

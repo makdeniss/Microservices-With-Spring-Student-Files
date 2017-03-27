@@ -17,7 +17,7 @@ import rx.Observable;
  * adjectives, and nouns. The individual parts of speech will be obtained by
  * calling the various DAOs.
  * 
- * @author Ken Krueger, Jorge Centeno Fernandez 
+ * @author Ken Krueger, Jorge Centeno Fernandez
  */
 @Service
 public class SentenceServiceImpl implements SentenceService {

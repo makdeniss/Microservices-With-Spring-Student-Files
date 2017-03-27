@@ -6,14 +6,20 @@ package demo.domain;
 public class Word {
 
 	public String word;
+	private Role role;
+
+	public Word(String word, Role role) {
+		this(word);
+		this.role = role;
+	}
+
+	public Word(String word ) {
+		this();
+		this.word = word;
+	}
 
 	public Word() {
 		super();
-	}	
-	
-	public Word(String word) {
-		this();
-		this.word = word;
 	}
 
 	public String getWord() {
@@ -26,6 +32,18 @@ public class Word {
 
 	public void setWord(String word) {
 		this.word = word;
+	}
+
+	public Role getRole() {
+		return role;
+	}
+
+	public void setRole(Role role) {
+		this.role = role;
+	}
+
+	public static enum Role {
+		subject,verb,article,adjective,noun;
 	}
 	
 	
